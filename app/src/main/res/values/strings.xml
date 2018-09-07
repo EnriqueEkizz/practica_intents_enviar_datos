@@ -9,5 +9,5 @@
     <string name="str_menu7">Menú 7</string>
     <string name="str_menu8">Menú 8</string>
     <string name="str_menu9">Menú 9</string>
-    <string name="str_menu10">Menú 10</string>
+    <string name="str_send">Enviar pedido</string>
 </resources>
