@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">intents_enviar_datos</string>
+    <string name="str_menu1">Menú 1</string>
+    <string name="str_menu2">Menú 2</string>
+    <string name="str_menu3">Menú 3</string>
+    <string name="str_menu4">Menú 4</string>
+    <string name="str_menu5">Menú 5</string>
+    <string name="str_menu6">Menú 6</string>
+    <string name="str_menu7">Menú 7</string>
+    <string name="str_menu8">Menú 8</string>
+    <string name="str_menu9">Menú 9</string>
+    <string name="str_menu10">Menú 10</string>
+</resources>
