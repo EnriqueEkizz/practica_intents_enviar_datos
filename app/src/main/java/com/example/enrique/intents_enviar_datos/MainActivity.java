@@ -1,11 +1,15 @@
 package com.example.enrique.intents_enviar_datos;
 
+import android.content.ComponentCallbacks;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,18 +63,20 @@ public class MainActivity extends AppCompatActivity {
                 editarLista.editMenu(chkMenu8);
                 editarLista.editMenu(chkMenu9);
 
-                String cadena = "";
-                for (int x = 0; x < listaMenu.size(); x++) {
-                    cadena += listaMenu.get(x);
-                }
-                Log.i("Lista",cadena);
                 //Verificar si tamaño de lista es mayor a 0
+                if (listaMenu.size() > 0) {
+                    Intent intent = new Intent();
+                    ComponentName cName = new ComponentName("com.example.enrique.intents_recibir_datos","com.example.enrique.intents_recibir_datos.MainActivity");
+                    intent.setComponent(cName);
+                    intent.putExtra("listaMenu",listaMenu);
+                    startActivity(intent);
+                }
             }
         });
     }
 
     /*clase que permite recibir un checkbox y editar la lista de menu
-    según sea el estado del check*/
+    según es el estado del check*/
     private class clsEditarLista {
         private void editMenu(CheckBox xCheckbox) {
             int ind;
